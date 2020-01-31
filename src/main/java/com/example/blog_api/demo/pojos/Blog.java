@@ -1,4 +1,4 @@
-package com.example.blog_api.demo;
+package com.example.blog_api.demo.pojos;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,22 +9,22 @@ import javax.persistence.Id;
 public class  Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String id;
     private String title;
     private String content;
 
-    public Blog(int id, String title, String content) {
+    public Blog(String id, String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
     }
     public Blog(){}
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -43,5 +43,4 @@ public class  Blog {
     public void setContent(String content) {
         this.content = content;
     }
-
 }
